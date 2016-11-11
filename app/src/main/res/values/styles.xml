@@ -1,0 +1,25 @@
+<resources>
+    <!--主Theme-->
+    <style name="DemoTheme" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!--设置全局字体-->
+        <item name="android:typeface">serif</item>
+    </style>
+    <!--启动Theme-->
+    <style name="DemoTheme.LauncherTheme">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@drawable/ic_launcher_bg</item>
+    </style>
+    <!--无标题Theme-->
+    <style name="DemoTheme.NoActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
+
+    <style name="DemoTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <style name="DemoTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+</resources>

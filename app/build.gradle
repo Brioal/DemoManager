@@ -1,0 +1,40 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.jakewharton.butterknife'
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.0"
+    defaultConfig {
+        applicationId "com.brioal.demomanager"
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode getVersionCode()
+        versionName getVersionName()
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:25.0.0'
+    compile 'cn.bmob.android:bmob-sdk:3.5.0'
+    compile 'cn.bmob.android:http-legacy:1.0'
+    compile 'com.android.support:design:25.0.0'
+    compile 'com.github.Brioal:CircleImageView:1.0'
+    compile 'com.jakewharton:butterknife:8.4.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+}
+
+def getVersionCode() {
+    Integer.parseInt(new Date().format("yyMMddHHmm"))
+}
+
+def getVersionName() {
+    java.lang.String s = new Date().format("yy") + "." + new Date().format("MMdd") + "." + revisionNumber + "." + new Date().format("HHmm")
+}
+
+
